@@ -1,0 +1,8 @@
+MVI A,6H
+MVI B,4H
+XRA B
+STA 2100
+HLT
+
+Output:
+2100 - 02

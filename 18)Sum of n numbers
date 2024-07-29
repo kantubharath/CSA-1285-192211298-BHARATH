@@ -1,0 +1,27 @@
+LXI H,8000
+MOV C,M
+LXI H,8010
+XRA A
+MOV E,A
+LOOP: ADD M
+JNC SKIP
+INR E
+SKIP: DCR C
+INX H
+JNZ LOOP
+LXI H,9000
+MOV M,A
+INX H
+MOV M,E
+HLT
+
+Input:
+8000 - 04 (Array size)
+ Array Elements
+8010 - 05
+8011 - 07
+8012 - 03
+8013 - 09
+
+Output:
+9000 - 24
